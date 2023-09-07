@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sneha</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #sorry-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #sorry-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="sorry-container">
+        <button id="sorry-button">QT click here 👉🏻👈🏻</button>
+    </div>
+
+    <script>
+        const sorryButton = document.getElementById("sorry-button");
+        const sorryContainer = document.getElementById("sorry-container");
+
+        sorryButton.addEventListener("click", () => {
+            const sorryText = document.createElement("div");
+            sorryText.innerText = "Sorry";
+            sorryText.style.position = "absolute";
+            sorryText.style.top = `${Math.random() * 100}vh`;
+            sorryText.style.left = `${Math.random() * 100}vw`;
+            sorryText.style.fontSize = `${Math.random() * 2 + 1}rem`;
+            sorryText.style.color = `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256})`;
+            sorryContainer.appendChild(sorryText);
+        });
+    </script>
+</body>
+</html>
